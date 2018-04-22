@@ -25,12 +25,8 @@ export const NpcTalk = {
     ],
 
     'villagegirl': [
-      'Hi there, adventurer!',
-      'How do you like this game?',
-      'It\'s all happening in a single web page! Isn\'t it crazy?',
-      'It\'s all made possible thanks to WebSockets.',
-      'I don\'t know much about it, after all I\'m just a program.',
-      'Why don&#x27;t you read this <a target="_blank" href="http://hacks.mozilla.org/2012/03/browserquest/">blog post</a> and learn all about it?'
+      'Welcome to ScienceQuest!',
+      'You can play games from <a target="_blank" href="http://volunteerscience.com/experiments/">here</a>. Eventually.'
     ],
 
     'villager': [
@@ -93,7 +89,7 @@ export const NpcTalk = {
     ],
 
     'priest': [
-      'Oh, hello, young man.',
+      'Oh, hello, my friend.',
       'Wisdom is everything, so I\'ll share a few guidelines with you.',
       'You are free to go wherever you like in this world',
       'but beware of the many foes that await you.',
@@ -101,7 +97,7 @@ export const NpcTalk = {
       'The tougher the enemy, the higher the potential rewards.',
       'You can also unlock achievements by exploring and hunting.',
       'Click on the small cup icon to see a list of all the achievements.',
-      'Please stay a while and enjoy the many surprises of BrowserQuest',
+      'Please stay a while and enjoy the many surprises of ScienceQuest.',
       'Farewell, young friend.'
     ],
 
@@ -120,13 +116,13 @@ export const NpcTalk = {
     ],
 
     'octocat': [
-      'Welcome to BrowserQuest!',
-      'Want to see the source code?',
+      'Welcome to ScienceQuest!',
+      'The code is based on BrowserQuest.',
       'Check out <a target="_blank" href="http://github.com/mozilla/BrowserQuest">the repository on GitHub</a>'
     ],
 
     'coder': [
-      'Hi! Do you know that you can also play BrowserQuest on your tablet or mobile?',
+      'Hi! Do you know that you can also play ScienceQuest on your tablet or mobile?',
       'That\'s the beauty of HTML5!',
       'Give it a try...'
     ],

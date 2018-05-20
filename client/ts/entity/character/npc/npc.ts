@@ -26,7 +26,7 @@ export const NpcTalk = {
 
     'villagegirl': [
       'Welcome to ScienceQuest!',
-      'You can play games from <a target="_blank" href="http://volunteerscience.com/experiments/">here</a>. Eventually.'
+      'You can play games from <iframe src="_blank" href="http://volunteerscience.com/experiments/">here</iframe>. Eventually.'
     ],
 
     'villager': [
@@ -62,13 +62,7 @@ export const NpcTalk = {
     ],
 
     'scientist': [
-      'Greetings.',
-      'I am the inventor of these two potions.',
-      'The red one will replenish your health points...',
-      'The orange one will turn you into a firefox and make you invincible...',
-      'But it only lasts for a short while.',
-      'So make good use of it!',
-      'Now if you\'ll excuse me, I need to get back to my experiments...'
+      'Do you want to play <a target="_blank" href="https://volunteerscience.com/experiments/">an economics game</a>?'
     ],
 
     'nyan': [
@@ -122,9 +116,7 @@ export const NpcTalk = {
     ],
 
     'coder': [
-      'Hi! Do you know that you can also play ScienceQuest on your tablet or mobile?',
-      'That\'s the beauty of HTML5!',
-      'Give it a try...'
+      'Do you want to play <iframe src="_blank" href="https://volunteerscience.com/experiments/">a psychology game</iframe>?'
     ],
 
     'beachnpc': [

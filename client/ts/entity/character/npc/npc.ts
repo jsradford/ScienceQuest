@@ -26,7 +26,7 @@ export const NpcTalk = {
 
     'villagegirl': [
       'Welcome to ScienceQuest!',
-      'You can play games from <iframe src="_blank" href="http://volunteerscience.com/experiments/">here</iframe>. Eventually.'
+      'You can play games from <iframe src="http://volunteerscience.com/experiments/">here</iframe>. Eventually.'
     ],
 
     'villager': [
@@ -62,7 +62,7 @@ export const NpcTalk = {
     ],
 
     'scientist': [
-      'Do you want to play <a target="_blank" href="https://volunteerscience.com/experiments/">an economics game</a>?'
+      'Do you want to play <iframe src="https://volunteerscience.com/experiments">an economics game</iframe>?'
     ],
 
     'nyan': [
@@ -116,7 +116,7 @@ export const NpcTalk = {
     ],
 
     'coder': [
-      'Do you want to play <iframe src="_blank" href="https://volunteerscience.com/experiments/">a psychology game</iframe>?'
+      'Do you want to play <iframe src="https://volunteerscience.com/experiments/">a psychology game</iframe>?'
     ],
 
     'beachnpc': [

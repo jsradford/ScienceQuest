@@ -234,7 +234,7 @@ export class Game {
     var self = this;
 
     this.achievements = {
-      A_TRUE_WARRIOR: {
+                 A_TRUE_WARRIOR: {
                     id: 1,
                     name: "A True Warrior",
                     desc: "Find a new weapon"
@@ -351,6 +351,11 @@ export class Game {
                     name: "Rickroll'd",
                     desc: "Take some singing lessons",
                     hidden: true
+                },
+                GAMER: {
+                    id: 20,
+                    name: "Gamer",
+                    desc: "Played your first game, of any type.",
                 }
 
                 // more: play 1, 2, all types of games

@@ -114,7 +114,7 @@ export class GameClient {
         if (self.isTimeout) {
           self.disconnected_callback('You have been disconnected for being inactive for too long');
         } else {
-          self.disconnected_callback('The connection to BrowserQuest has been lost');
+          self.disconnected_callback('The connection to ScienceQuest has been lost');
         }
       }
     });

@@ -26,7 +26,12 @@ export class Storage {
         skeletonCount: 0,
         totalKills: 0,
         totalDmg: 0,
-        totalRevives: 0
+        totalRevives: 0,
+        gameTypePlayedCounts: {
+          gt1: 0,
+          gt2: 0,
+          gt3: 0
+        }
       }
     };
   }
@@ -50,7 +55,6 @@ export class Storage {
   }
 
   // Player
-
   hasAlreadyPlayed() {
     return this.data.hasAlreadyPlayed;
   }
@@ -87,7 +91,6 @@ export class Storage {
   }
 
   // Achievements
-
   hasUnlockedAchievement(id) {
     return _.include(this.data.achievements.unlocked, id);
   }
@@ -165,4 +168,17 @@ export class Storage {
     }
   }
 
+  //VS Game stuff
+  getTotalGamesPlayed() {
+    gameTypePlayedCounts =  Object.values(this.data.achievements.gameTypePlayedCounts)   
+    return gameTypePlayedCounts.reduce((total, count) => total + count)
+  }
+
+  incrementGamePlayedCount(gameType) {
+    // TODO: Find a better way to refer to the game type
+    if gameType in this.data.achievements.gameTypePlayedCounts {
+     this.data.achievements.gameTypePlayedCounts[gameType]++; 
+    }
+  }
+ 
 }

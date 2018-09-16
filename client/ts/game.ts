@@ -351,6 +351,22 @@ export class Game {
                     name: "Rickroll'd",
                     desc: "Take some singing lessons",
                     hidden: true
+                },
+                VS_FIRST_GAME: {
+                  id: 21,
+                  name: "First Volunteer Science game",
+                  desc: "Played first Volunteer Science game",
+                  isCompleted: function() {
+                        return self.storage.getTotalGamesPlayed() >= 1;
+                    }
+                },
+                VS_TWO_GAME_TYPES: {
+                  id: 22,
+                  name: "Volunteer Science game explorer",
+                  desc: "Played two types of Volunteer Science games",
+                  isCompleted: function() {
+                        return self.storage.getGameTypesPlayed() == 2;
+                    }
                 }
 
                 // more: play 1, 2, all types of games

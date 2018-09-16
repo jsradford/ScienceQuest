@@ -170,7 +170,7 @@ export class Storage {
 
   //VS Game stuff
   getTotalGamesPlayed() {
-    var gameTypePlayedCounts = Object["values"](this.data.achievements.gameTypePlayedCounts)   
+    var gameTypePlayedCounts = Object["values"](this.data.achievements.gameTypePlayedCounts)
     return gameTypePlayedCounts.reduce((total, count) => total + count)
   }
 
@@ -179,6 +179,18 @@ export class Storage {
     if (gameType in this.data.achievements.gameTypePlayedCounts) {
      this.data.achievements.gameTypePlayedCounts[gameType]++; 
     }
+  }
+
+  // Get number of different game types played
+  getGameTypesPlayed() {
+    var gameTypePlayedCounts = Object["values"](this.data.achievements.gameTypePlayedCounts)
+    var gameTypesPlayed = 0;
+    for (var i = 0; i < gameTypePlayedCounts.length; i++) {
+      if (gameTypesPlayedCounts[i] > 0) {
+        gameTypesPlayed++;
+      }
+    }
+    return gameTypesPlayed;
   }
  
 }

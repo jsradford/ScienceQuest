@@ -4,29 +4,37 @@ import {Character} from '../character';
 
 export const NpcTalk = {
     'guard': [
-      'Welcome to ScienceQuest! Go to house on the hill in the center of the village to play a game.',
-      'My name is guard. I am a guard.'
+      'My name is guard. I am a guard.',
+      "Don't muck around. Your health will not regenerate outside of town!"
     ],
 
     'king': [
-      'Hi, I\'m the King',
-      'Leave this house and go South and West to the house on the hill to play a game'
+      "Hi, I'm King Philbert! Tom for short."
+      "You should visit my Scientist. She has a study just for you.",
+      "You'll find her in her house on the hill in the center of town.",
+      "Leave this house and go Southwest."
     ],
 
     'villagegirl': [
-      'Welcome to ScienceQuest! Go South and East to the house on the hill to play a game.',
-      'You can play games from <a target="blank" href="http://volunteerscience.com/experiments/">here</a>. Eventually.',
-      'My name is Village Girl. Apparently.'
+      "Welcome to ScienceQuest! My grandma is a scientists here.",
+      "She keeps building crazy experiments for us to play.",
+      "You should check them out! She would love your help!",
+      "Go Southeast to the house on the hill to play a game."
     ],
 
     'villager': [
-      'Welcome to ScienceQuest! Go South to the house on the hill to play a game.',
-      'My name is villager. I\'m a villager. How\'s that for nominative determanism?'
+      "Hello Stranger! Welcome to ScienceQuest.",
+      "My name is Villager! Villager!"
+      "I hear the scientist is cooking up something special for you.",
+      "Go southwest to the house on the hill to play a game."
     ],
 
     'agent': [
-      'Welcome to ScienceQuest! Go South and West to the house on the hill to play a game.',
-      'I am agent.'
+      "Welcome to ScienceQuest!",
+      "I'm a secret agent, so don't tell anyone.",
+      "I have a special quest for you.",
+      "Head south toward the beach and you'll find a cave with a special game."
+      "Alright, be cool. Stay in school."
     ],
 
     'rick': [
@@ -45,7 +53,8 @@ export const NpcTalk = {
     ],
 
     'scientist': [
-      'Do you want to play <iframe src="https://volunteerscience.com/experiments">an economics game</iframe>?'
+      "Welcome to my lab!",
+      'Let\'s play our first game - <iframe src="https://volunteerscience.com/experiments">Play an economics game</iframe>?'
     ],
 
     'nyan': [
@@ -56,8 +65,8 @@ export const NpcTalk = {
     ],
 
     'forestnpc': [
-      'lorem ipsum dolor sit amet',
-      'consectetur adipisicing elit, sed do eiusmod tempor'
+      "I'm the forestnpc. If you've found me, you've gone in the wrong direction!",
+      "",
     ],
 
     'lavanpc': [
@@ -66,13 +75,14 @@ export const NpcTalk = {
     ],
 
     'priest': [
+      "Welcome to ScienceQuest, I'm the priest!"
       'Go South and East to the house on the hill to play a game.',
-      'I\'m a priest!'
     ],
 
     'sorcerer': [
-      'Welcome to ScienceQuest! Go East to the house on the hill to play a game.',
-      'So sayeth me the sorcerer.'
+      'Welcome to ScienceQuest, I am the sorcerer!',
+      "We need you to make the magic happen.",
+      "Head East to the scientist's house to "
     ],
 
     'octocat': [
@@ -82,14 +92,17 @@ export const NpcTalk = {
     ],
 
     'coder': [
-      'Do you want to play <iframe src="https://volunteerscience.com/experiments/">a psychology game</iframe>?'
+      'Would you like to play a game? <iframe src="https://volunteerscience.com/experiments/">Play a psychology game</iframe>?'
     ],
 
     'beachnpc': [
-      'Don\'t mind me, I\'m just here on vacation.',
-      'I have to say...',
-      'These giant crabs are somewhat annoying.',
-      'Could you please get rid of them for me?'
+      "Hey there fellow traveler! I'm the Barry the Beachlover";
+      "Congratulations for surviving all these crabs."
+      "Looks like you could use a better sword."
+      'Let\'s play <iframe src="https://volunteerscience.com/experiments/">Wildcat Wells</iframe>?'
+      "Excellent work. Here's the sword I promised."
+      'Want to play again? <iframe src="https://volunteerscience.com/experiments/">Play Again</iframe>?'
+      "Alright, good work! Head back into town for more studies."
     ],
 
     'desertnpc': [
@@ -101,8 +114,8 @@ export const NpcTalk = {
     ],
 
     'othernpc': [
-      'lorem ipsum',
-      'lorem ipsum'
+      "I'm othernpc. No one knows where I am",
+      'If you find me, tell Jason.'
     ]
   };
 

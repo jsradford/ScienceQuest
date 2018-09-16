@@ -170,13 +170,13 @@ export class Storage {
 
   //VS Game stuff
   getTotalGamesPlayed() {
-    gameTypePlayedCounts =  Object.values(this.data.achievements.gameTypePlayedCounts)   
+    var gameTypePlayedCounts = Object["values"](this.data.achievements.gameTypePlayedCounts)   
     return gameTypePlayedCounts.reduce((total, count) => total + count)
   }
 
   incrementGamePlayedCount(gameType) {
     // TODO: Find a better way to refer to the game type
-    if gameType in this.data.achievements.gameTypePlayedCounts {
+    if (gameType in this.data.achievements.gameTypePlayedCounts) {
      this.data.achievements.gameTypePlayedCounts[gameType]++; 
     }
   }

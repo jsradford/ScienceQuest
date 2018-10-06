@@ -28,9 +28,8 @@ export class Storage {
         totalDmg: 0,
         totalRevives: 0,
         gameTypePlayedCounts: {
-          gt1: 0,
-          gt2: 0,
-          gt3: 0
+          economics: 0,
+          psychology: 0
         }
       }
     };
@@ -186,7 +185,7 @@ export class Storage {
     var gameTypePlayedCounts = Object["values"](this.data.achievements.gameTypePlayedCounts)
     var gameTypesPlayed = 0;
     for (var i = 0; i < gameTypePlayedCounts.length; i++) {
-      if (gameTypesPlayedCounts[i] > 0) {
+      if (gameTypePlayedCounts[i] > 0) {
         gameTypesPlayed++;
       }
     }

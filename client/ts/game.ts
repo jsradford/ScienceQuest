@@ -2431,6 +2431,12 @@ export class Game {
     }
   }
 
+  onVSGamePlayed(gameType) {
+    self.storage.incrementGameTypePlayedCount(gameType);
+    this.tryUnlockingAchievement('VS_FIRST_GAME');
+    this.tryUnlockingAchievement('VS_TWO_GAME_TYPES');
+  }
+
   showNotification(message) {
     if (this.notification_callback) {
       this.notification_callback(message);

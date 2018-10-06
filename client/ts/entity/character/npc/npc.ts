@@ -45,7 +45,7 @@ export const NpcTalk = {
     ],
 
     'scientist': [
-      'Do you want to play <iframe src="https://volunteerscience.com/experiments">an economics game</iframe>?'
+      'Do you want to play <iframe src="https://volunteerscience.com/experiments" onunload="unlockVSAchievement(economics)">an economics game</iframe>?'
     ],
 
     'nyan': [
@@ -82,7 +82,7 @@ export const NpcTalk = {
     ],
 
     'coder': [
-      'Do you want to play <iframe src="https://volunteerscience.com/experiments/">a psychology game</iframe>?'
+      'Do you want to play <iframe src="https://volunteerscience.com/experiments/" onunload="unlockVSAchievement(psychology)">a psychology game</iframe>?'
     ],
 
     'beachnpc': [

@@ -334,39 +334,39 @@ export class Game {
                     name: "Hero",
                     desc: "Defeat the final boss"
                 },
-                FOXY: {
-                    id: 18,
-                    name: "Foxy",
-                    desc: "Find the Firefox costume",
-                    hidden: true
-                },
-                FOR_SCIENCE: {
-                    id: 19,
-                    name: "For Science",
-                    desc: "Enter into a portal",
-                    hidden: true
-                },
-                RICKROLLD: {
-                    id: 20,
-                    name: "Rickroll'd",
-                    desc: "Take some singing lessons",
-                    hidden: true
-                },
                 VS_FIRST_GAME: {
-                  id: 21,
-                  name: "First Volunteer Science game",
-                  desc: "Played first Volunteer Science game",
+                  id: 18,
+                  name: "First VS game",
+                  desc: "Played first VS game",
                   isCompleted: function() {
                         return self.storage.getTotalGamesPlayed() >= 1;
                     }
                 },
                 VS_TWO_GAME_TYPES: {
-                  id: 22,
-                  name: "Volunteer Science game explorer",
-                  desc: "Played two types of Volunteer Science games",
+                  id: 19,
+                  name: "VS game explorer",
+                  desc: "Played two types of VS games",
                   isCompleted: function() {
                         return self.storage.getGameTypesPlayed() == 2;
                     }
+                },
+                FOXY: {
+                    id: 20,
+                    name: "Foxy",
+                    desc: "Find the Firefox costume",
+                    hidden: true
+                },
+                FOR_SCIENCE: {
+                    id: 21,
+                    name: "For Science",
+                    desc: "Enter into a portal",
+                    hidden: true
+                },
+                RICKROLLD: {
+                    id: 22,
+                    name: "Rickroll'd",
+                    desc: "Take some singing lessons",
+                    hidden: true
                 }
 
                 // more: play 1, 2, all types of games

@@ -173,10 +173,10 @@ export class Storage {
     return gameTypePlayedCounts.reduce((total, count) => total + count)
   }
 
-  incrementGamePlayedCount(gameType) {
-    // TODO: Find a better way to refer to the game type
+  incrementGameTypePlayedCount(gameType) {
     if (gameType in this.data.achievements.gameTypePlayedCounts) {
-     this.data.achievements.gameTypePlayedCounts[gameType]++; 
+     this.data.achievements.gameTypePlayedCounts[gameType]++;
+     this.save();
     }
   }
 

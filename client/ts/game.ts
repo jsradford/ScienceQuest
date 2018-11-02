@@ -1702,8 +1702,14 @@ export class Game {
 
     if (npc) {
       msg = npc.talk();
+
       this.previousClickPosition = {};
       if (msg) {
+        if (msg.startsWith("<GAME_PLAYED>")) {
+          var gameType = msg.split("|")[1];
+          this.onVSGamePlayed(gameType);
+          msg = msg.split("|")[2]
+        }
         this.createBubble(npc.id, msg);
         this.assignBubbleTo(npc);
         this.audioManager.playSound('npc');

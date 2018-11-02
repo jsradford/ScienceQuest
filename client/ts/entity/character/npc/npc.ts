@@ -9,22 +9,22 @@ export const NpcTalk = {
     ],
 
     'king': [
-      "Hi, I'm King Philbert! Tom for short."
+      "Hi, I'm King Philbert! Tom for short.",
       "You should visit my Scientist. She has a study just for you.",
       "You'll find her in her house on the hill in the center of town.",
       "Leave this house and go Southwest."
     ],
 
     'villagegirl': [
-      "Welcome to ScienceQuest! My grandma is a scientists here.",
+      "Welcome to ScienceQuest! My grandma is a scientist here.",
       "She keeps building crazy experiments for us to play.",
       "You should check them out! She would love your help!",
       "Go Southeast to the house on the hill to play a game."
-    ],
-
+    ],  
+  
     'villager': [
       "Hello Stranger! Welcome to ScienceQuest.",
-      "My name is Villager! Villager!"
+      "My name is Villager! Villager!",
       "I hear the scientist is cooking up something special for you.",
       "Go southwest to the house on the hill to play a game."
     ],
@@ -33,7 +33,7 @@ export const NpcTalk = {
       "Welcome to ScienceQuest!",
       "I'm a secret agent, so don't tell anyone.",
       "I have a special quest for you.",
-      "Head south toward the beach and you'll find a cave with a special game."
+      "Head south toward the beach and you'll find a cave with a special game.",
       "Alright, be cool. Stay in school."
     ],
 
@@ -54,9 +54,16 @@ export const NpcTalk = {
 
     'scientist': [
       "Welcome to my lab!",
-      'Let\'s play our first game - <iframe src="https://volunteerscience.com/experiments" onunload="unlockVSAchievement(economics)">Play an economics game</iframe>?'
-    ],
-
+      "Let's play our first game - Three Cows!", 
+      '<div><button id="bubblebutton" onclick="document.getElementById(\'iframe\').parentNode.removeChild(document.getElementById(\'iframe\'))">\
+      When done playing, press here, then talk to me!</button><iframe height="430px" width="100%" src="http://volunteerscience.com/experiments/?join_category=228" \
+      id="iframe" name="iframe_scientist1"></iframe></div>',
+      "<GAME_PLAYED>|economics|Let's play a second game - Decision Problems!", 
+      '<div><button id="bubblebutton" onclick="document.getElementById(\'iframe\').parentNode.removeChild(document.getElementById(\'iframe\'))">\
+      When done playing, press here, then talk to me!</button><iframe height="430px" width="100%" src="http://volunteerscience.com/experiments/?join_category=32" \
+      id="iframe" name="iframe_scientist2"></iframe></div>',
+      "<GAME_PLAYED>|psychology|Thanks for playing!"
+    ],  
     'nyan': [
       'nyan nyan nyan nyan nyan',
       'nyan nyan nyan nyan nyan nyan nyan',
@@ -75,14 +82,14 @@ export const NpcTalk = {
     ],
 
     'priest': [
-      "Welcome to ScienceQuest, I'm the priest!"
-      'Go South and East to the house on the hill to play a game.',
+      "Welcome to ScienceQuest, I'm the priest!",
+      'Go South and East to the house on the hill to play a game.'
     ],
 
     'sorcerer': [
       'Welcome to ScienceQuest, I am the sorcerer!',
       "We need you to make the magic happen.",
-      "Head East to the scientist's house to "
+      "Head East to the scientist's house to play a game."
     ],
 
     'octocat': [
@@ -92,17 +99,24 @@ export const NpcTalk = {
     ],
 
     'coder': [
-      'Would you like to play a game? <iframe src="https://volunteerscience.com/experiments/" onunload="unlockVSAchievement(psychology)">Play a psychology game</iframe>?'
+      'Welcome to ScienceQuest, I am your friendly neighborhood coder!',
+      "Head southwest to the scientist's house to play a game."
     ],
 
     'beachnpc': [
-      "Hey there fellow traveler! I'm the Barry the Beachlover";
-      "Congratulations for surviving all these crabs."
-      "Looks like you could use a better sword."
-      'Let\'s play <iframe src="https://volunteerscience.com/experiments/">Wildcat Wells</iframe>?'
-      "Excellent work. Here's the sword I promised."
-      'Want to play again? <iframe src="https://volunteerscience.com/experiments/">Play Again</iframe>?'
-      "Alright, good work! Head back into town for more studies."
+      "Hey there fellow traveler! I'm the Barry the Beachlover",
+      "Congratulations for surviving all these crabs.",
+      "Looks like you could use a better sword.",
+      "Let's play Wildcat Wells!",
+      '<div><button id="bubblebutton" onclick="document.getElementById(\'iframe\').parentNode.removeChild(document.getElementById(\'iframe\'))">\
+      When done playing, press here, then talk to me!</button><iframe height="430px" width="100%" src="http://volunteerscience.com/experiments/?join_category=68" \
+      id="iframe" name="iframe_beachnpc1" ></iframe></div>',   
+      "<GAME_PLAYED>|psychology|Excellent work. Here's the sword I promised.",
+      'Want to play another game of your choice?',
+      '<div><button id="bubblebutton" onclick="document.getElementById(\'iframe\').parentNode.removeChild(document.getElementById(\'iframe\'))">\
+      When done playing, press here, then talk to me!</button><iframe height="430px" width="100%" src="http://volunteerscience.com/experiments/" \
+      id="iframe" name="iframe_beachnpc2" ></iframe></div>',    
+      "<GAME_PLAYED>|psychology|Alright, good work! Head back into town for more studies."   
     ],
 
     'desertnpc': [

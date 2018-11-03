@@ -45,7 +45,7 @@ const loot = require('../sprites/loot.json');
 const mailarmor = require('../sprites/mailarmor.json');
 const morningstar = require('../sprites/morningstar.json');
 const nyan = require('../sprites/nyan.json');
-const octocat = require('../sprites/octocat.json');
+const squiddog = require('../sprites/squiddog.json');
 const ogre = require('../sprites/ogre.json');
 const platearmor = require('../sprites/platearmor.json');
 const priest = require('../sprites/priest.json');
@@ -101,7 +101,7 @@ export const sprites = {
   mailarmor,
   morningstar,
   nyan,
-  octocat,
+  squiddog,
   ogre,
   platearmor,
   priest,

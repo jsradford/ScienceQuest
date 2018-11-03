@@ -68,7 +68,7 @@ export const Types: any = {
     // NPCs
     GUARD: 40,
     KING: 41,
-    OCTOCAT: 42,
+    SQUIDDOG: 42,
     VILLAGEGIRL: 43,
     VILLAGER: 44,
     PRIEST: 45,
@@ -151,7 +151,7 @@ var kinds = {
   nyan: [Types.Entities.NYAN, 'npc'],
   sorcerer: [Types.Entities.SORCERER, 'npc'],
   agent: [Types.Entities.AGENT, 'npc'],
-  octocat: [Types.Entities.OCTOCAT, 'npc'],
+  squiddog: [Types.Entities.SQUIDDOG, 'npc'],
   beachnpc: [Types.Entities.BEACHNPC, 'npc'],
   forestnpc: [Types.Entities.FORESTNPC, 'npc'],
   desertnpc: [Types.Entities.DESERTNPC, 'npc'],

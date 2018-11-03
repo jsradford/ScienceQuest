@@ -95,9 +95,9 @@ export const NPCs = {
     }
   },
 
-  Octocat: class Guard extends Npc {
+  Squiddog: class Guard extends Npc {
     constructor(id) {
-      super(id, Types.Entities.OCTOCAT);
+      super(id, Types.Entities.SQUIDDOG);
     }
   }
 };

@@ -88,7 +88,7 @@ export const NpcTalk = {
       "Head East to the scientist's house to play a game."
     ],
 
-    'octocat': [
+    'squiddog': [
       'Welcome to ScienceQuest!',
       'The code is based on BrowserQuest.',
       'Check out <a target="_blank" href="http://github.com/mozilla/BrowserQuest">the repository on GitHub</a>'

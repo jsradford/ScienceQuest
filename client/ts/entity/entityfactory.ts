@@ -195,8 +195,8 @@ EntityFactory.builders[Types.Entities.SORCERER] = function (id) {
   return new NPCs.Sorcerer(id);
 };
 
-EntityFactory.builders[Types.Entities.OCTOCAT] = function (id) {
-  return new NPCs.Octocat(id);
+EntityFactory.builders[Types.Entities.SQUIDDOG] = function (id) {
+  return new NPCs.Squiddog(id);
 };
 
 EntityFactory.builders[Types.Entities.BEACHNPC] = function (id) {

@@ -191,7 +191,7 @@ footer, header, hgroup, menu, nav, section {
     .achievement-sharing {position:absolute;display:none;}
     #achievements li.unlocked:hover .achievement-sharing {display:block;}
     .achievement-sharing a {display:block;float:left;}
-    
+
     #bubbles a {pointer-events:auto;text-decoration:none;color:#fcda5c;}
     #bubblebutton {font-family:"GraphicPixel";}
 
@@ -484,6 +484,7 @@ footer, header, hgroup, menu, nav, section {
         /*Death & Respawn*/
         #death p {font-size:30px;margin-top:140px;}
         #death p em {margin-top:50px;}
+
         #respawn {width:375px;height:153px;margin:60px auto 0 auto;background-position: 0 -1428px;}
         #respawn:active {background-position:-375px -1428px;}
         
@@ -650,6 +651,7 @@ footer, header, hgroup, menu, nav, section {
         /*Death & Respawn*/
         #death p {font-size:20px;margin-top:90px;}
         #death p em {margin-top:30px;}
+
         #respawn {width:250px;height:102px;margin:40px auto 0 auto;background-position: 0 -952px;}
         #respawn:active {background-position:-250px -952px;}
         
@@ -818,7 +820,6 @@ footer, header, hgroup, menu, nav, section {
         #respawn {width:250px;height:102px;margin:40px auto 0 auto;background-position: 0 -952px;}
         #respawn:active {background-position:-250px -952px;}
         
-        /*Bubbles*/
         //#bubbles {width:90%;height:90%;position:absolute;pointer-events:auto;}        
         #bubbles {width:90%;height:90%;pointer-events:auto;}            
         //#bubbles {width:960px;height:448px;margin-bottom:50px;pointer-events:auto;}               
@@ -978,6 +979,7 @@ footer, header, hgroup, menu, nav, section {
         /*Death & Respawn*/
         #death p {font-size:10px;margin-top:45px;}
         #death p em {margin-top:0px;}
+
         #respawn {width:125px;height:51px;margin:21px auto 0 auto;background-position: 0 -476px;}
         #respawn:active {background-position:-125px -476px;}
         

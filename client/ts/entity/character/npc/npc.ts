@@ -21,8 +21,7 @@ export const NpcTalk = {
       "She keeps building crazy experiments for us to play.",
       "You should check them out! She would love your help!",
       "Go Southeast to the house on the hill to play a game."
-	],	
-	
+    ],  
 
     'villager': [
       "Hello Stranger! Welcome to ScienceQuest.",
@@ -56,8 +55,8 @@ export const NpcTalk = {
 
     'scientist': [
       "Welcome to my lab!",	  
-	  'dropdown:Three Cows,228,Decision,32,All Games Page,A',		  
-	  'Thanks for playing!'	  	  
+	    'dropdown:Three Cows,228,Decision,32,All Games Page,A',		  
+	    '<GAME_PLAYED>|psychology|Thanks for playing!'	  	  
     ],	
 
     'nyan': [
@@ -79,7 +78,7 @@ export const NpcTalk = {
 
     'priest': [
       "Welcome to ScienceQuest, I'm the priest!",
-      'Go South and East to the house on the hill to play a game.',
+      'Go South and East to the house on the hill to play a game.'
     ],
 
     'sorcerer': [
@@ -95,7 +94,7 @@ export const NpcTalk = {
     ],
 
     'coder': [
-      'Welcome to ScienceQuest, I am your friendly neighborhood coder!',	  	  
+      'Welcome to ScienceQuest, I am your friendly neighborhood coder!',
       "Head southwest to the scientist's house to play a game."
     ],
 
@@ -103,8 +102,8 @@ export const NpcTalk = {
       "Hey there fellow traveler! I'm the Barry the Beachlover",
       "Congratulations for surviving all these crabs.",
       "Looks like you could use a better sword.",
-	  'dropdown:Wildcat Wells,68,All Games Page,A',
-      "Alright, good work! Head back into town for more studies."	  
+	    'dropdown:Wildcat Wells,68,All Games Page,A',
+      "<GAME_PLAYED>|psychology|Alright, good work! Head back into town for more studies."	  
     ],
 
     'desertnpc': [

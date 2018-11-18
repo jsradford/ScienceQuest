@@ -26,7 +26,11 @@ export class Storage {
         skeletonCount: 0,
         totalKills: 0,
         totalDmg: 0,
-        totalRevives: 0
+        totalRevives: 0,
+        gameTypePlayedCounts: {
+          economics: 0,
+          psychology: 0
+        }
       }
     };
   }
@@ -50,7 +54,6 @@ export class Storage {
   }
 
   // Player
-
   hasAlreadyPlayed() {
     return this.data.hasAlreadyPlayed;
   }
@@ -87,7 +90,6 @@ export class Storage {
   }
 
   // Achievements
-
   hasUnlockedAchievement(id) {
     return _.include(this.data.achievements.unlocked, id);
   }
@@ -165,4 +167,29 @@ export class Storage {
     }
   }
 
+  //VS Game stuff
+  getTotalGamesPlayed() {
+    var gameTypePlayedCounts = Object["values"](this.data.achievements.gameTypePlayedCounts)
+    return gameTypePlayedCounts.reduce((total, count) => total + count)
+  }
+
+  incrementGameTypePlayedCount(gameType) {
+    if (gameType in this.data.achievements.gameTypePlayedCounts) {
+     this.data.achievements.gameTypePlayedCounts[gameType]++;
+     this.save();
+    }
+  }
+
+  // Get number of different game types played
+  getGameTypesPlayed() {
+    var gameTypePlayedCounts = Object["values"](this.data.achievements.gameTypePlayedCounts)
+    var gameTypesPlayed = 0;
+    for (var i = 0; i < gameTypePlayedCounts.length; i++) {
+      if (gameTypePlayedCounts[i] > 0) {
+        gameTypesPlayed++;
+      }
+    }
+    return gameTypesPlayed;
+  }
+ 
 }

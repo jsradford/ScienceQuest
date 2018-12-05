@@ -5,7 +5,9 @@ import {Character} from '../character';
 export const NpcTalk = {
     'guard': [
       'My name is guard. I am a guard.',
-      "Don't muck around. Your health will not regenerate outside of town!"
+      "Don't muck around. Your health will not regenerate outside of town!",
+	  'dropdown:Demographics,125,Random Survey,44',		  
+	  '<GAME_PLAYED>|survey|Thanks for playing!'	  		  
     ],
 
     'king': [
@@ -19,10 +21,11 @@ export const NpcTalk = {
     'villagegirl': [
       "Welcome to ScienceQuest! My grandma is a scientist here.",
       "She keeps building crazy experiments for us to play.",
+	  'This is a pure test - switching games with placeholder game...',
+	  'dropdown:Placeholder,485,Random Survey,44',	
       "You should check them out! She would love your help!",
       "Go Southeast to the house on the hill to play a game."
-	],	
-	
+    ],  
 
     'villager': [
       "Hello Stranger! Welcome to ScienceQuest.",
@@ -56,8 +59,8 @@ export const NpcTalk = {
 
     'scientist': [
       "Welcome to my lab!",	  
-	  'dropdown:Three Cows,228,Decision,32,All Games Page,A',		  
-	  'Thanks for playing!'	  	  
+	  'dropdown:Three Cows,228,Public Goods,100',		  
+	  '<GAME_PLAYED>|economics|Thanks for playing!'	  	  
     ],	
 
     'nyan': [
@@ -79,13 +82,15 @@ export const NpcTalk = {
 
     'priest': [
       "Welcome to ScienceQuest, I'm the priest!",
-      'Go South and East to the house on the hill to play a game.',
+      'Go South and East to the house on the hill to play a game.'
     ],
 
     'sorcerer': [
       'Welcome to ScienceQuest, I am the sorcerer!',
       "We need you to make the magic happen.",
-      "Head East to the scientist's house to play a game."
+	  'dropdown:Reaction Time,26,Decision Problems,32',			  
+	  '<GAME_PLAYED>|psychology|Thanks for playing!',  	  	  
+      "Head East to the scientist's house to play another game."
     ],
 
     'squiddog': [
@@ -95,7 +100,9 @@ export const NpcTalk = {
     ],
 
     'coder': [
-      'Welcome to ScienceQuest, I am your friendly neighborhood coder!',	  	  
+      'Welcome to ScienceQuest, I am your friendly neighborhood coder!',
+	  'dropdown:Scavenger Hunt,454,Decision Problems,419',			  
+	  '<GAME_PLAYED>|Harbinger|Thanks for playing!',	  
       "Head southwest to the scientist's house to play a game."
     ],
 
@@ -103,8 +110,8 @@ export const NpcTalk = {
       "Hey there fellow traveler! I'm the Barry the Beachlover",
       "Congratulations for surviving all these crabs.",
       "Looks like you could use a better sword.",
-	  'dropdown:Wildcat Wells,68,All Games Page,A',
-      "Alright, good work! Head back into town for more studies."	  
+	  'dropdown:Wildcat Wells,68,Traveling Salesperson,6',
+      "<GAME_PLAYED>|problem_solving|Alright, good work! Head back into town for more studies."	  
     ],
 
     'desertnpc': [

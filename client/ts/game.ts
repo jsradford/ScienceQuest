@@ -2502,17 +2502,17 @@ export class Game {
     this.tryUnlockingAchievement('GAMETYPE_QUESTER');
 
     var count = this.storage.getGameTypePlayedCount(gameType);
-    if (count > 100) {
+    if (count === 200) {
       this.tryUnlockingAchievement('NOBEL_PRIZE');
-    } else if (count > 50) {
+    } else if (count === 100) {
       this.tryUnlockingAchievement('PRINCIPAL_INVESTIGATOR');
-    } else if (count > 25) {
+    } else if (count === 50) {
       this.tryUnlockingAchievement('RESEARCHER');
-    } else if (count > 10) {
+    } else if (count === 25) {
       this.tryUnlockingAchievement('JUNIOR_SCIENTIST');
-    } else if (count > 5) {
+    } else if (count === 10) {
       this.tryUnlockingAchievement('NOVICE');
-    } else {
+    } else if (count === 5) {
       this.tryUnlockingAchievement('BEGINNER');
     }
 

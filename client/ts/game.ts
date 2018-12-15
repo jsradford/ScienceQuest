@@ -235,141 +235,195 @@ export class Game {
 
     this.achievements = {
       A_TRUE_WARRIOR: {
-                    id: 1,
-                    name: "A True Warrior",
-                    desc: "Find a new weapon"
-                },
-                INTO_THE_WILD: {
-                    id: 2,
-                    name: "Into the Wild",
-                    desc: "Venture outside the village"
-                },
-                ANGRY_RATS: {
-                    id: 3,
-                    name: "Angry Rats",
-                    desc: "Kill 10 rats",
-                    isCompleted: function() {
-                        return self.storage.getRatCount() >= 10;
-                    }
-                },
-                SMALL_TALK: {
-                    id: 4,
-                    name: "Small Talk",
-                    desc: "Talk to a non-player character"
-                },
-                FAT_LOOT: {
-                    id: 5,
-                    name: "Fat Loot",
-                    desc: "Get a new armor set"
-                },
-                UNDERGROUND: {
-                    id: 6,
-                    name: "Underground",
-                    desc: "Explore at least one cave"
-                },
-                AT_WORLDS_END: {
-                    id: 7,
-                    name: "At World's End",
-                    desc: "Reach the south shore"
-                },
-                COWARD: {
-                    id: 8,
-                    name: "Coward",
-                    desc: "Successfully escape an enemy"
-                },
-                TOMB_RAIDER: {
-                    id: 9,
-                    name: "Tomb Raider",
-                    desc: "Find the graveyard"
-                },
-                SKULL_COLLECTOR: {
-                    id: 10,
-                    name: "Skull Collector",
-                    desc: "Kill 10 skeletons",
-                    isCompleted: function() {
-                        return self.storage.getSkeletonCount() >= 10;
-                    }
-                },
-                NINJA_LOOT: {
-                    id: 11,
-                    name: "Ninja Loot",
-                    desc: "Get hold of an item you didn't fight for"
-                },
-                NO_MANS_LAND: {
-                    id: 12,
-                    name: "No Man's Land",
-                    desc: "Travel through the desert"
-                },
-                HUNTER: {
-                    id: 13,
-                    name: "Hunter",
-                    desc: "Kill 50 enemies",
-                    isCompleted: function() {
-                        return self.storage.getTotalKills() >= 50;
-                    }
-                },
-                STILL_ALIVE: {
-                    id: 14,
-                    name: "Still Alive",
-                    desc: "Revive your character five times",
-                    isCompleted: function() {
-                        return self.storage.getTotalRevives() >= 5;
-                    }
-                },
-                MEATSHIELD: {
-                    id: 15,
-                    name: "Meatshield",
-                    desc: "Take 5,000 points of damage",
-                    isCompleted: function() {
-                        return self.storage.getTotalDamageTaken() >= 5000;
-                    }
-                },
-                HOT_SPOT: {
-                    id: 16,
-                    name: "Hot Spot",
-                    desc: "Enter the volcanic mountains"
-                },
-                HERO: {
-                    id: 17,
-                    name: "Hero",
-                    desc: "Defeat the final boss"
-                },
-                VS_FIRST_GAME: {
-                  id: 18,
-                  name: "First VS game",
-                  desc: "Played first VS game",
-                  isCompleted: function() {
-                        return self.storage.getTotalGamesPlayed() >= 1;
-                    }
-                },
-                VS_TWO_GAME_TYPES: {
-                  id: 19,
-                  name: "VS game explorer",
-                  desc: "Played two types of VS games",
-                  isCompleted: function() {
-                        return self.storage.getGameTypesPlayed() == 2;
-                    }
-                },
-                FOXY: {
-                    id: 20,
-                    name: "Foxy",
-                    desc: "Find the Firefox costume",
-                    hidden: true
-                },
-                FOR_SCIENCE: {
-                    id: 21,
-                    name: "For Science",
-                    desc: "Enter into a portal",
-                    hidden: true
-                },
-                RICKROLLD: {
-                    id: 22,
-                    name: "Rickroll'd",
-                    desc: "Take some singing lessons",
-                    hidden: true
-                }
-
-                // more: play 1, 2, all types of games
+          id: 1,
+          name: "A True Warrior",
+          desc: "Find a new weapon"
+      },
+      INTO_THE_WILD: {
+          id: 2,
+          name: "Into the Wild",
+          desc: "Venture outside the village"
+      },
+      ANGRY_RATS: {
+          id: 3,
+          name: "Angry Rats",
+          desc: "Kill 10 rats",
+          isCompleted: function() {
+              return self.storage.getRatCount() >= 10;
+          }
+      },
+      SMALL_TALK: {
+          id: 4,
+          name: "Small Talk",
+          desc: "Talk to a non-player character"
+      },
+      FAT_LOOT: {
+          id: 5,
+          name: "Fat Loot",
+          desc: "Get a new armor set"
+      },
+      UNDERGROUND: {
+          id: 6,
+          name: "Underground",
+          desc: "Explore at least one cave"
+      },
+      AT_WORLDS_END: {
+          id: 7,
+          name: "At World's End",
+          desc: "Reach the south shore"
+      },
+      COWARD: {
+          id: 8,
+          name: "Coward",
+          desc: "Successfully escape an enemy"
+      },
+      TOMB_RAIDER: {
+          id: 9,
+          name: "Tomb Raider",
+          desc: "Find the graveyard"
+      },
+      SKULL_COLLECTOR: {
+          id: 10,
+          name: "Skull Collector",
+          desc: "Kill 10 skeletons",
+          isCompleted: function() {
+              return self.storage.getSkeletonCount() >= 10;
+          }
+      },
+      NINJA_LOOT: {
+          id: 11,
+          name: "Ninja Loot",
+          desc: "Get hold of an item you didn't fight for"
+      },
+      NO_MANS_LAND: {
+          id: 12,
+          name: "No Man's Land",
+          desc: "Travel through the desert"
+      },
+      HUNTER: {
+          id: 13,
+          name: "Hunter",
+          desc: "Kill 50 enemies",
+          isCompleted: function() {
+              return self.storage.getTotalKills() >= 50;
+          }
+      },
+      STILL_ALIVE: {
+          id: 14,
+          name: "Still Alive",
+          desc: "Revive your character five times",
+          isCompleted: function() {
+              return self.storage.getTotalRevives() >= 5;
+          }
+      },
+      MEATSHIELD: {
+          id: 15,
+          name: "Meatshield",
+          desc: "Take 5,000 points of damage",
+          isCompleted: function() {
+              return self.storage.getTotalDamageTaken() >= 5000;
+          }
+      },
+      HOT_SPOT: {
+          id: 16,
+          name: "Hot Spot",
+          desc: "Enter the volcanic mountains"
+      },
+      HERO: {
+          id: 17,
+          name: "Hero",
+          desc: "Defeat the final boss"
+      },
+      VS_FIRST_GAME: {
+        id: 18,
+        name: "First VS game",
+        desc: "Played first VS game",
+        isCompleted: function() {
+          return self.storage.getTotalGamesPlayed() >= 1;
+        }
+      },
+      VS_TWO_GAME_TYPES: {
+        id: 19,
+        name: "VS game explorer",
+        desc: "Played two types of VS games",
+        isCompleted: function() {
+          return self.storage.getGameTypesPlayed() == 2;
+        }
+      },               
+      BEGINNER: {
+        id: 20,
+        name: "VS Beginner",
+        desc: "Played 5 VS games of type",
+        isCompleted: function() {
+          return self.storage.isGameTypeCountGreaterThan(5);
+        }
+      },
+      NOVICE: {
+        id: 21,
+        name: "VS Novice",
+        desc: "Played 10 VS games of type",
+        isCompleted: function() {
+          return self.storage.isGameTypeCountGreaterThan(10);
+        }
+      },
+      JUNIOR_SCIENTIST: {
+        id: 22,
+        name: "VS Junior Artist",
+        desc: "Played 25 VS games of type",
+        isCompleted: function() {
+          return self.storage.isGameTypeCountGreaterThan(25);
+        }
+      },
+      RESEARCHER: {
+        id: 23,
+        name: "VS Researcher",
+        desc: "Played 50 VS games of type",
+        isCompleted: function() {
+          return self.storage.isGameTypeCountGreaterThan(50);
+        }
+      },
+      PRINCIPAL_INVESTIGATOR: {
+        id: 24,
+        name: "VS Principal Investigator",
+        desc: "Played 100 VS games of type",
+        isCompleted: function() {
+          return self.storage.isGameTypeCountGreaterThan(100);
+        }
+      }, 
+      NOBEL_PRIZE: {
+        id: 25,
+        name: "VS Nobel Prize",
+        desc: "Played 200 VS games of type",
+        isCompleted: function() {
+          return self.storage.isGameTypeCountGreaterThan(200);
+        }
+      },
+      GAMETYPE_QUESTER: {
+        id: 26,
+        name: "All VS game types",
+        desc: "Played all types of VS games",
+        isCompleted: function() {
+          return self.storage.isAllGameTypesPlayed();
+        }
+      },
+      FOXY: {
+          id: 27,
+          name: "Foxy",
+          desc: "Find the Firefox costume",
+          hidden: true
+      },
+      FOR_SCIENCE: {
+          id: 28,
+          name: "For Science",
+          desc: "Enter into a portal",
+          hidden: true
+      },
+      RICKROLLD: {
+          id: 29,
+          name: "Rickroll'd",
+          desc: "Take some singing lessons",
+          hidden: true
+      } 
    };
 
     _.each(this.achievements, function (obj) {
@@ -2445,6 +2499,23 @@ export class Game {
     this.storage.incrementGameTypePlayedCount(gameType);
     this.tryUnlockingAchievement('VS_FIRST_GAME');
     this.tryUnlockingAchievement('VS_TWO_GAME_TYPES');
+    this.tryUnlockingAchievement('GAMETYPE_QUESTER');
+
+    var count = this.storage.getGameTypePlayedCount(gameType);
+    if (count > 100) {
+      this.tryUnlockingAchievement('NOBEL_PRIZE');
+    } else if (count > 50) {
+      this.tryUnlockingAchievement('PRINCIPAL_INVESTIGATOR');
+    } else if (count > 25) {
+      this.tryUnlockingAchievement('RESEARCHER');
+    } else if (count > 10) {
+      this.tryUnlockingAchievement('JUNIOR_SCIENTIST');
+    } else if (count > 5) {
+      this.tryUnlockingAchievement('NOVICE');
+    } else {
+      this.tryUnlockingAchievement('BEGINNER');
+    }
+
   }
 
   showNotification(message) {

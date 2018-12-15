@@ -125,25 +125,25 @@ export const NpcTalk = {
     itemKind;
     talkCount;
     talkIndex;
-	gameListIdentifier;
+	  gameListIdentifier;
 
     constructor(id, kind) {
       super(id, kind);
       this.itemKind = Types.getKindAsString(this.kind);
       this.talkCount = NpcTalk[this.itemKind].length;
       this.talkIndex = 0;
-	  this.gameListIdentifier = "dropdown:";	  	  
+	    this.gameListIdentifier = "dropdown:";	  	  
     }
 
     talk() {
       var msg = null;
 	  var msgToCheck = "";
 
-      if (this.talkIndex > this.talkCount) {
-        this.talkIndex = 0;
-      }
-      if (this.talkIndex < this.talkCount) {
-        msgToCheck = NpcTalk[this.itemKind][this.talkIndex];
+    if (this.talkIndex > this.talkCount) {
+      this.talkIndex = 0;
+    }
+    if (this.talkIndex < this.talkCount) {
+      msgToCheck = NpcTalk[this.itemKind][this.talkIndex];
 		if (this.isGameMsg(msgToCheck)) {
 			msg = this.playGames(msgToCheck);
 		}
@@ -171,7 +171,7 @@ export const NpcTalk = {
 		var optionList = msg.replace(this.gameListIdentifier,"");
 		var dropdownStartHTML = '<form position:relative; z-index:10>Choose game from dropdown and <a href="javascript:setiframe()" style="background-color:black;color:yellow">click here to play</a>. (If general game page appears, click again)&nbsp;&nbsp; <select id="games">';
 		var dropdownEndHTML = '</select></form>';		
-	    var optionHTMLTemplate = '<option value="valueX">textX</option>';		
+	  var optionHTMLTemplate = '<option value="valueX">textX</option>';		
 		var optionArray = optionList.split(',');
 		var optionsHTML = "";
 		var optionHTML = "";		
@@ -194,5 +194,5 @@ export const NpcTalk = {
 		return playGamesMsg;
 	}
 
-  }	
+}	
 	

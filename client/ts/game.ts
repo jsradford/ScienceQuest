@@ -3,7 +3,7 @@ import {Warrior} from './entity/character/player/classes/warrior';
 import {BubbleManager} from './interface/bubble.manager';
 import {log} from './lib/log';
 //import {Types} from '../../shared/ts/gametypes';
-import {Types} from 'gametypes';
+import {Types} from './gametypes';
 import {Animation} from './animation';
 import {Sprite} from './renderer/sprite';
 import Map from './map/map';

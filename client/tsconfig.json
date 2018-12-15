@@ -84,6 +84,7 @@
   "exclude": [
     "./node_modules",
     "./client/ts/lib",
-    "./client/ts/lib/underscore.min.js"
+    "./client/ts/lib/underscore.min.js",
+    "./shared/ts/gametypes.ts"
   ]
 }

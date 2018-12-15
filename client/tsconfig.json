@@ -85,6 +85,6 @@
     "./node_modules",
     "./client/ts/lib",
     "./client/ts/lib/underscore.min.js",
-    "./shared/ts/gametypes.ts"
+    "gametypes"
   ]
 }

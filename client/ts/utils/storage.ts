@@ -29,7 +29,10 @@ export class Storage {
         totalRevives: 0,
         gameTypePlayedCounts: {
           economics: 0,
-          psychology: 0
+          psychology: 0,
+          human_intelligence: 0,
+          problem_solving: 0,
+          surveys: 0,
         }
       }
     };
@@ -190,6 +193,28 @@ export class Storage {
       }
     }
     return gameTypesPlayed;
+  }
+
+  getGameTypePlayedCount(gameType) {
+    if (gameType in this.data.achievements.gameTypePlayedCounts) {
+      return this.data.achievements.gameTypePlayedCounts[gameType];
+    } else{
+      return 0;
+    }
+  }
+
+  isGameTypeCountGreaterThan(count) {
+    var gameTypePlayedCounts = Object["values"](this.data.achievements.gameTypePlayedCounts)
+    for (var i = 0; i < gameTypePlayedCounts.length; i++) {
+      if (gameTypePlayedCounts[i] >= count) {
+          return true
+      }
+    }
+    return false
+  }
+
+  isAllGameTypesPlayed() {
+    return this.getGameTypesPlayed() == Object.keys(this.data.achievements.gameTypePlayedCounts).length
   }
  
 }

@@ -5,13 +5,15 @@ import {Character} from '../character';
 export const NpcTalk = {
     'guard': [
       'My name is guard. I am a guard.',
-      "Don't muck around. Your health will not regenerate outside of town!"
+      "Don't muck around. Your health will not regenerate outside of town!",
+      'dropdown:Demographics,125,Random Survey,44',
+      '<GAME_PLAYED>|survey|Thanks for playing!'
     ],
 
     'king': [
       "Hi, I'm King Philbert! Tom for short.",
       "You should visit my Scientist. She has a study just for you.",
-      "You'll find her in her house on the hill in the center of town.",	  
+      "You'll find her in her house on the hill in the center of town.",
       "Leave this house and go Southwest."
     ],
 
@@ -54,10 +56,10 @@ export const NpcTalk = {
     ],
 
     'scientist': [
-      "Welcome to my lab!",	  
-	    'dropdown:Three Cows,228,Decision,32,All Games Page,A',		  
-	    '<GAME_PLAYED>|psychology|Thanks for playing!'	  	  
-    ],	
+      "Welcome to my lab!",   
+      'dropdown:Three Cows,228,Public Goods,100',
+      '<GAME_PLAYED>|economics|Thanks for playing!'
+    ],  
 
     'nyan': [
       'nyan nyan nyan nyan nyan',
@@ -84,7 +86,9 @@ export const NpcTalk = {
     'sorcerer': [
       'Welcome to ScienceQuest, I am the sorcerer!',
       "We need you to make the magic happen.",
-      "Head East to the scientist's house to play a game."
+      'dropdown:Reaction Time,26,Decision Problems,32',
+      '<GAME_PLAYED>|psychology|Thanks for playing!',
+      "Head East to the scientist's house to play another game."
     ],
 
     'squiddog': [
@@ -95,6 +99,8 @@ export const NpcTalk = {
 
     'coder': [
       'Welcome to ScienceQuest, I am your friendly neighborhood coder!',
+      'dropdown:Scavenger Hunt,454,Harbinger,419',
+      '<GAME_PLAYED>|human_intelligence|Thanks for playing!',
       "Head southwest to the scientist's house to play a game."
     ],
 
@@ -102,8 +108,8 @@ export const NpcTalk = {
       "Hey there fellow traveler! I'm the Barry the Beachlover",
       "Congratulations for surviving all these crabs.",
       "Looks like you could use a better sword.",
-	    'dropdown:Wildcat Wells,68,All Games Page,A',
-      "<GAME_PLAYED>|psychology|Alright, good work! Head back into town for more studies."	  
+      'dropdown:Wildcat Wells,68,Traveling Salesperson,6',
+      "<GAME_PLAYED>|problem_solving|Alright, good work! Head back into town for more studies."
     ],
 
     'desertnpc': [
@@ -125,74 +131,74 @@ export const NpcTalk = {
     itemKind;
     talkCount;
     talkIndex;
-	gameListIdentifier;
+    gameListIdentifier;
 
     constructor(id, kind) {
       super(id, kind);
       this.itemKind = Types.getKindAsString(this.kind);
       this.talkCount = NpcTalk[this.itemKind].length;
       this.talkIndex = 0;
-	  this.gameListIdentifier = "dropdown:";	  	  
+      this.gameListIdentifier = "dropdown:";
     }
 
     talk() {
       var msg = null;
-	  var msgToCheck = "";
+    var msgToCheck = "";
 
-      if (this.talkIndex > this.talkCount) {
-        this.talkIndex = 0;
-      }
-      if (this.talkIndex < this.talkCount) {
-        msgToCheck = NpcTalk[this.itemKind][this.talkIndex];
-		if (this.isGameMsg(msgToCheck)) {
-			msg = this.playGames(msgToCheck);
-		}
-		else {
-			msg = msgToCheck;
-		}
+    if (this.talkIndex > this.talkCount) {
+      this.talkIndex = 0;
+    }
+    if (this.talkIndex < this.talkCount) {
+      msgToCheck = NpcTalk[this.itemKind][this.talkIndex];
+    if (this.isGameMsg(msgToCheck)) {
+      msg = this.playGames(msgToCheck);
+    }
+    else {
+      msg = msgToCheck;
+    }
       }
       this.talkIndex += 1;
 
       return msg;
     }
 
-	/* Identify msg that starts with the game list identifier */
-	isGameMsg(msg) {				
-		var startOptionPos = msg.indexOf(this.gameListIdentifier);
-		if (startOptionPos == -1)
-			return false;
-		else
-			return true;		
-	}
-	
-	/* Change msg starting with game list identifier to the dropdown/iframe msg - ex. 'dropdown:Three Cows,228,Decision,32' */
-	playGames(msg) {	
-		var allGamePage = "A";
-		var optionList = msg.replace(this.gameListIdentifier,"");
-		var dropdownStartHTML = '<form position:relative; z-index:10>Choose game from dropdown and <a href="javascript:setiframe()" style="background-color:black;color:yellow">click here to play</a>. (If general game page appears, click again)&nbsp;&nbsp; <select id="games">';
-		var dropdownEndHTML = '</select></form>';		
-	    var optionHTMLTemplate = '<option value="valueX">textX</option>';		
-		var optionArray = optionList.split(',');
-		var optionsHTML = "";
-		var optionHTML = "";		
-		var optionText = "";
-		var optionValue = "";
-		var i;		
-		for (i = 0; i < optionArray.length; i += 2) { 	
-			optionText = optionArray[i];
-			optionValue = optionArray[i+1];		
-			optionHTML = optionHTMLTemplate.replace("textX", optionText);	
-			optionHTML = optionHTML.replace("valueX", optionValue);				
-			optionsHTML = optionsHTML + optionHTML;
-		}
-		var bubbleButtonHTML = '<div><button id="bubblebutton" onclick="document.getElementById(\'iframe\').parentNode.removeChild(document.getElementById(\'iframe\'))">When done playing, press here, then talk to me!</button>'		
-		var gameLink = '?join_category=';
-		var iframeHTML = '<iframe height="430px" width="100%" id="iframe"></iframe></div>';		
-		var scriptHTMLPart1 = '<script>function setiframe(){var sel=document.getElementById(\'games\');var gameValue="";if (sel.value!="' + allGamePage + '") {gameValue = "' + gameLink + '" + sel.value;}';
-		var scriptHTMLPart2 = 'var url ="http://volunteerscience.com/experiments/" + gameValue;document.getElementById(\'iframe\').src = url;}</script>';	  
-		var playGamesMsg = dropdownStartHTML + optionsHTML + dropdownEndHTML + bubbleButtonHTML + iframeHTML + scriptHTMLPart1 + scriptHTMLPart2;
-		return playGamesMsg;
-	}
+  /* Identify msg that starts with the game list identifier */
+  isGameMsg(msg) {        
+    var startOptionPos = msg.indexOf(this.gameListIdentifier);
+    if (startOptionPos == -1)
+      return false;
+    else
+      return true;    
+  }
+  
+  /* Change msg starting with game list identifier to the dropdown/iframe msg - ex. 'dropdown:Three Cows,228,Decision,32' */
+  playGames(msg) {  
+    var allGamePage = "A";
+    var optionList = msg.replace(this.gameListIdentifier,"");
+    var dropdownStartHTML = '<form position:relative; z-index:10>Choose game from dropdown and <a href="javascript:setiframe()" style="background-color:black;color:yellow">click here to play</a>. (If general game page appears, click again)&nbsp;&nbsp; <select id="games">';
+    var dropdownEndHTML = '</select></form>';   
+    var optionHTMLTemplate = '<option value="valueX">textX</option>';
+    var optionArray = optionList.split(',');
+    var optionsHTML = "";
+    var optionHTML = "";
+    var optionText = "";
+    var optionValue = "";
+    var i;
+    for (i = 0; i < optionArray.length; i += 2) {
+      optionText = optionArray[i];
+      optionValue = optionArray[i+1];
+      optionHTML = optionHTMLTemplate.replace("textX", optionText); 
+      optionHTML = optionHTML.replace("valueX", optionValue);
+      optionsHTML = optionsHTML + optionHTML;
+    }
+    var bubbleButtonHTML = '<div><button id="bubblebutton" onclick="document.getElementById(\'iframe\').parentNode.removeChild(document.getElementById(\'iframe\'))">When done playing, press here, then talk to me!</button>'    
+    var gameLink = '?join_category=';
+    var iframeHTML = '<iframe height="430px" width="100%" id="iframe"></iframe></div>';
+    var scriptHTMLPart1 = '<script>function setiframe(){var sel=document.getElementById(\'games\');var gameValue="";if (sel.value!="' + allGamePage + '") {gameValue = "' + gameLink + '" + sel.value;}';
+    var scriptHTMLPart2 = 'var url ="http://volunteerscience.com/experiments/" + gameValue;document.getElementById(\'iframe\').src = url;}</script>';   
+    var playGamesMsg = dropdownStartHTML + optionsHTML + dropdownEndHTML + bubbleButtonHTML + iframeHTML + scriptHTMLPart1 + scriptHTMLPart2;
+    return playGamesMsg;
+  }
 
-  }	
-	
+} 
+  

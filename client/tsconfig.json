@@ -20,7 +20,9 @@
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
     "outDir": "../dist/client",
     /* Redirect output structure to the directory. */
-    "rootDir": "./ts",
+    //"rootDir": "./ts",
+    "rootDir": "..",
+    
     /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     "removeComments": true,
     /* Do not emit comments to output. */

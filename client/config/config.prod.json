@@ -1,4 +1,4 @@
 {
-    "host": "Set production websocket host here",
+    "host": "sciencequest.volunteerscience.com",
     "port": 8000
 }
